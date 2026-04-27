@@ -17,7 +17,7 @@ class PokemonApp extends LitElement {
 
     render(){
         if (this.route.startsWith('#/pokemon/')){
-            const id = this.route.split('/')[2];
+            const id = Number(this.route.split('/')[2]);
             return html`
                 <pokemon-detail .pokemonId=${id}></pokemon-detail>
             `;
